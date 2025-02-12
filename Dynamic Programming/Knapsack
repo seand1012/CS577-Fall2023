@@ -1,0 +1,59 @@
+import java.util.*;
+
+class Pair {
+    int x;
+    int y;
+
+    public Pair (int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+
+    public int getWeight(){
+        return this.x;
+    }
+
+    public int getValue(){
+        return this.y;
+    }
+}
+
+public class Knapsack{
+    
+    public static void main (String[] args){
+        Scanner scan = new Scanner(System.in);
+        int instances = scan.nextInt();
+
+        for(int i = 0; i < instances; i++){
+            int items = scan.nextInt();
+            int capacity = scan.nextInt();
+            int indicator = 0;
+            int output = 0;
+            HashMap<Integer,Integer> table = new HashMap<>();
+
+            int[][] v = new int[items][capacity];
+            for(int j = 0; j < items; j++){
+                int weight = scan.nextInt();
+                int value = scan.nextInt();
+                table.put(weight,value);
+            }
+
+            for(int k = 0; k < items; k++){
+                v[k][0] = 0;
+                for(int w = 0; w < capacity; w++){
+                    v[0][w] = 0;
+                    v[k][w] = Math.max(v[k-1][w], );
+                }
+            }
+            for(int k = 0; k < items; k++){
+                for(int w = 0; w < capacity; w++){
+                    
+                }
+            }
+            System.out.println(table.toString());
+        }
+
+
+        scan.close();
+    }
+}

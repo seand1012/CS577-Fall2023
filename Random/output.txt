@@ -1,0 +1,3 @@
+javac Random.java
+java Random
+-1 1 -1 1 1-1 1 -1 1 1
